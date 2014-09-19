@@ -1,6 +1,7 @@
  <?php
  require("../conexion_BD.php");
 	echo"<br> <br>";
+	echo "<h1><a href='../vista/salida.php'>Cerrar sesión</a></h1> <br>"; 
  //consultamos la base, obtenemos resultados
  $statement = $pdo->query("SELECT * FROM cliente");
  
@@ -15,4 +16,5 @@
  }
 	echo "<br>";
 	echo"<a href = '../vista/alta.php'>Nuevo Cliente</a>";
-		echo "<h1><a href='../vista/salida.php'>Cerrar sesión</a></h1>";
+		echo "<br>";
+		echo "<a href='../vista/buscar.php'>Modificar</a>";

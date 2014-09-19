@@ -1,22 +1,28 @@
 <?php
 	require('../conexion_BD.php');
 	
-	$nombre = $_POST['nomcli'];
 	$apellido = $_POST['apecli'];
+	$nombre = $_POST['nomcli'];
 	$edad = $_POST['edad'];
+	
 	////////no andaaaaaaa
-	if(empty ($nombre)){
-		if(empty ($apellido)){
-			if(empty ($edad)){
+	echo "<br>";
+	
+	
+	if(!empty($nombre) && !empty($apellido) && $edad > 0){ //$nombre) !="" && $apellido !="" && $edad > 0)
+			echo"<br>";
+			$statement = $pdo->query("INSERT INTO cliente(apellido, nombre, edad) VALUES ('$apellido','$nombre','$edad')");
+			//$row = $statement->fetchAll(PDO::FETCH_ASSOC); 
+			echo"se guardo correctamente en la BD"; echo"<br>";
+			
 				
-			echo"se guardo correctamente en la BD";
-				}
-			}
-			
-			
 			}else
-			
-			echo"ingresar datos";
+			{
+			echo"<br> Por favor ingresar datos correctos <br>";
+			}
+			echo"<a href = '../vista/alta.php'>Nuevo Cliente</a>";
+			echo"<br> <br>";
+			echo"<a href = '../modelo/consulta.php'>Listado de Clientes</a>";
 			
 
 ?>

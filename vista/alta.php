@@ -13,7 +13,5 @@
 	
 	</html>
 <?php 
-		//	if($_POST[]){
-		//echo "Se ha ingresado correctamente el Cliente Nuevo";
-	//	}
+
 		?>

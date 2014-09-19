@@ -12,9 +12,8 @@
 			require("../modelo/acceso_consulta.php");
 	
 	}else{
-	//if(!isset($_SESSION['nombre'])):
 	echo"Error: no ha iniciado sesión \n";
-	echo "<h1><a href='../index.php'>Iniciar sesión </a> </h1>";
+	echo "<h1><a href='../vista/index.php'>Iniciar sesión </a> </h1>";
 	
 }
 	
